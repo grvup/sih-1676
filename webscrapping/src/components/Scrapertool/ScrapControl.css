@@ -1,0 +1,22 @@
+.scraper-control {
+    padding: 20px;
+  }
+  
+  .scraper-control button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .scraper-control button:last-child {
+    background-color: #e74c3c;
+  }
+  
+  .scraper-control button:hover {
+    opacity: 0.8;
+  }
+  

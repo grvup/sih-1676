@@ -1,0 +1,37 @@
+.vulnerabilities {
+    padding: 20px;
+}
+
+.vulnerabilities h2 {
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    width: 30%; /* Adjust size here */
+    margin: 0 auto 40px auto;
+}
+
+.chart-container canvas {
+    width: 100% !important; /* Ensures canvas respects container size */
+    height: auto !important; /* Maintains aspect ratio */
+}
+
+.vulnerabilities table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.vulnerabilities th, .vulnerabilities td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.vulnerabilities th {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+.vulnerabilities tr:hover {
+    background-color: #f1f1f1;
+}

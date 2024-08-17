@@ -1,0 +1,22 @@
+.logs {
+    padding: 20px;
+  }
+  
+  .logs ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .logs li {
+    background-color: #ecf0f1;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    font-family: monospace;
+  }
+  
+  .logs li span {
+    font-weight: bold;
+    color: #3498db;
+  }
+  

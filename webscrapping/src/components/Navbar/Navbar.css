@@ -1,0 +1,175 @@
+/* Basic styling for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Stick to the top */
+    left: 0; /* Align to the left edge */
+    z-index: 1000; /* Ensure it stays on top */
+  }
+  
+  /* Styling for the title */
+  .navbar-title {
+    flex-grow: 1; /* Allow the title to take up available space */
+  }
+  
+  .navbar-title h1 {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Styling for the toggle button */
+  .navbar-toggle {
+    display: none; /* Hide toggle button by default */
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: #ecf0f1;
+    cursor: pointer;
+  }
+  
+  /* Main content styling for large screens */
+  .navbar-content {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px; /* Space between menu items */
+  }
+  
+  .navbar-menu li {
+    margin: 0;
+  }
+  
+  .navbar-menu a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  .navbar-menu a:hover {
+    text-decoration: underline;
+  }
+  
+  /* User info styling */
+  .navbar-user-info {
+    margin-left: auto; /* Push user info to the far right */
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    position: fixed;
+    top: 55px; /* Adjust if navbar height changes */
+    left: 0; /* Align sidebar to the left */
+    width: 250px;
+    height: 100%;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(-100%); /* Hide sidebar off-screen */
+    transition: transform 0.3s ease;
+    z-index: 1000; /* Ensure the sidebar is on top */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar.open {
+    transform: translateX(0); /* Slide in the sidebar */
+  }
+  
+  .sidebar-close {
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #ecf0f1;
+    align-self: flex-end;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-menu li {
+    margin: 10px 0 10px 10px; /* Spacing between items */
+    text-align: left;
+  }
+  
+  .sidebar-menu a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .sidebar-menu span {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 0 0 -9px;
+  }
+  
+  .sidebar-menu a:hover {
+    text-decoration: underline;
+  }
+  
+  .sidebar-user-info {
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Responsive styling */
+  @media (min-width: 769px) {
+    .navbar-toggle {
+      display: none; /* Hide toggle button on large screens */
+    }
+  
+    .navbar-content {
+      display: flex; /* Show content on large screens */
+    }
+  
+    .sidebar {
+      display: none; /* Hide sidebar on large screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-title {
+      flex-grow: 200; /* Prevent title from growing on small screens */
+      margin-right: auto; /* Push the title to the left */
+    }
+  
+    .navbar-menu {
+      display: none; /* Hide menu by default on small screens */
+    }
+  
+    .navbar-user-info {
+      display: none; /* Hide user info by default on small screens */
+    }
+  
+    .navbar-toggle {
+      display: block; /* Show toggle button on small screens */
+    }
+  }
+  
